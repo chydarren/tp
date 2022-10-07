@@ -19,14 +19,23 @@ import static seedu.duke.common.ErrorMessages.ERROR_ADD_COMMAND_AMOUNT_NOT_NUMER
 import static seedu.duke.common.InfoMessages.INFO_ADD_EXPENSE;
 import static seedu.duke.common.InfoMessages.INFO_ADD_INCOME;
 
+/**
+ * Represents an add command object that will execute the operations for Add command.
+ */
 public class AddCommand extends Command {
-
     private String input;
 
     public AddCommand(String input) {
         this.input = input;
     }
 
+    /**
+     * Executes the operations related to the command.
+     *
+     * @param ui An instance of the Ui class.
+     * @param transactions An instance of the TransactionList class.
+     * @param storage An instance of the Storage class.
+     */
     @Override
     public void execute(TransactionList transactions, Ui ui, Storage storage) throws MoolahException {
         /*
